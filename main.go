@@ -26,14 +26,16 @@ func main() {
 }
 
 func foo() {
-	for i := 0; i < 10; i++ {
+	for i := 0; i < 100; i++ {
 		fmt.Println("foo:", i)
 	}
 	wg.Done()
 }
 
 func bar() {
-	for i := 0; i < 10; i++ {
+	for i := 0; i < 100; i++ {
 		fmt.Println("bar:", i)
 	}
+	// time.Sleep(time.Second * 2)
+	// wg.Done()
 }
